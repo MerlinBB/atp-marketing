@@ -1,4 +1,4 @@
-wp-starter
-==========
+atp-marketing
+=============
 
-WordPress Base Template
+Marketing site for Audience Trading Platfrom
