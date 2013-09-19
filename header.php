@@ -29,6 +29,7 @@
 
 <div class="container">
 
+<header class="page-header">
 	<h1 class="sitename">
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 	</h1>
@@ -36,3 +37,4 @@
 	<nav class="menu">
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 	</nav>
+</header>
