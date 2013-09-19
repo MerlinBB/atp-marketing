@@ -10,20 +10,17 @@
 @black-90:                darken(#fff, 90%);
 
 // Brand colors
-@brand-primary:           #428bca;
-@brand-success:           #5cb85c;
-@brand-warning:           #f0ad4e;
-@brand-danger:            #d9534f;
-@brand-info:              #5bc0de;
+@color-grey:              #666;
+@color-grey-light:        lighten(@color-grey, 15%);
+@color-grey-dark:         darken(@color-grey, 15%);
+//
+@color-highlight:         #cf5cd3;
+@color-highlight-light:   lighten(@color-highlight, 15%);
+@color-highlight-dark:    darken(@color-highlight, 15%);
 
 // Scaffolding
 @body-background:         #fff;
-@text-color:              @black-50;
-@base-spacing-unit:       18px;
-
-// Links
-@link-color:              @brand-primary;
-@link-color-hover:        darken(@link-color, 15%);
+@spacing-unit-base:       18px;
 
 // Typography
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -42,11 +39,10 @@
 @headings-font-weight:    500;
 
 // Forms
-@input-color-placeholder: lighten(@text-color, 25%);
+@input-color-placeholder: lighten(@color-grey, 25%);
 
 // Grid
 // Used with the grid mixins below
 @grid-columns:            12;
-@grid-column-padding:     15px; // Left and right inner padding
+@grid-column-padding:     @spacing-unit-base; // Left and right inner padding
 @grid-float-breakpoint:   768px;
-
