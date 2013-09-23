@@ -5,6 +5,6 @@
 </div>
 
 <?php wp_footer(); ?>
-
+<script src="<?php bloginfo("template_url"); ?>/js/project.js"></script>
 </body>
 </html>
