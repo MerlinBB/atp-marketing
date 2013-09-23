@@ -62,6 +62,16 @@ body, p, input {
    font-smoothing: antialiased;
 }
 
+p {
+	margin:0 0 (@spacing-unit-base/2) 0;
+}
+
+.heading {
+	font-size:@font-size-large;
+	margin:0 0 @spacing-unit-base 0;
+	line-height:1em;
+}
+
 
 //-------------------------------------------------------------------------------------------------------------------
 //	Links
@@ -110,6 +120,25 @@ textarea:focus {
 	outline:none;
 }
 
+input[type="submit"],
+button,
+.btn {
+	display:inline-block;
+	padding:0 @spacing-unit-base;
+	line-height:2em;
+	.user-select(none);
+	border:1px solid @color-highlight-dark;
+	background:@color-highlight;
+	color:#fff;
+	.transition(background 0.2s);
+	&:hover, &:focus {
+		background:@color-highlight-dark;
+	}
+	&:active {
+		.box-shadow(inset 0 0 5px rgba(0,0,0,0.4));
+	}
+}
+
 
 //-------------------------------------------------------------------------------------------------------------------
 // Header
@@ -120,19 +149,19 @@ textarea:focus {
 	top:0;
 	left:0;
 	right:0;
+	z-index:1;
 	background:#fff;
 	padding:@spacing-unit-base 0;
 	.transition(padding 0.4s ease-in-out);
 	&:before {
-		@size:40px;
 		content:'';
 		position:absolute;
-		bottom:-@size;
+		bottom:-@clip-size;
 		display:block;
 		.square(0);
 		border-left:0 solid transparent;
-		border-right:@size solid transparent;
-		border-top:@size solid #fff;
+		border-right:@clip-size solid transparent;
+		border-top:@clip-size solid #fff;
 	}
 	.sitename {
 		a {
@@ -185,7 +214,37 @@ textarea:focus {
 // Content
 //-------------------------------------------------------------------------------------------------------------------
 
+#welcome-scene { height:650px; }
 
+.popup {
+	position:absolute;
+	top:150px;
+	left:50%;
+	margin-left:-200px;
+	padding:@spacing-unit-base;
+	width:400px;
+	.box-sizing(border-box);
+	background:#fff;
+	&:before {
+		content:'';
+		position:absolute;
+		top:-@clip-size;
+		left:0;
+		.box-sizing(border-box);
+		height:0;
+		width:100%;
+		display:block;
+		border-right:@clip-size solid transparent;
+		border-left:0 solid transparent;
+		border-bottom:@clip-size solid #fff;
+	}
+	.popup-actions {
+		border-top:1px solid @color-grey-vlight;
+		margin:@spacing-unit-base -@spacing-unit-base 0;
+		padding:@spacing-unit-base @spacing-unit-base 0;
+		text-align:center;
+	}
+}
 
 //-------------------------------------------------------------------------------------------------------------------
 //	Footer
