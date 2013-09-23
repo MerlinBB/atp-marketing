@@ -225,19 +225,8 @@ button,
 	width:400px;
 	.box-sizing(border-box);
 	background:#fff;
-	&:before {
-		content:'';
-		position:absolute;
-		top:-@clip-size;
-		left:0;
-		.box-sizing(border-box);
-		height:0;
-		width:100%;
-		display:block;
-		border-right:@clip-size solid transparent;
-		border-left:0 solid transparent;
-		border-bottom:@clip-size solid #fff;
-	}
+	background:-webkit-linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
+	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
 	.popup-actions {
 		border-top:1px solid @color-grey-vlight;
 		margin:@spacing-unit-base -@spacing-unit-base 0;
@@ -250,7 +239,15 @@ button,
 //	Footer
 //-------------------------------------------------------------------------------------------------------------------
 
-
+.page-footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	height:10px;
+	.retina-image("img/colorline-footer.png", "img/colorline-footer@2x.png", 1443px, 10px);
+	background-repeat:repeat-x;
+}
 
 //-------------------------------------------------------------------------------------------------------------------
 //	Media Queries

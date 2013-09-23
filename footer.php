@@ -1,6 +1,4 @@
-<footer class="pagefooter text-center">
-	<p class="copyright">&copy; <?php bloginfo( 'name' ); ?>, <?php echo date("Y"); ?>. All rights reserved.</p>
-</footer>
+<footer class="page-footer"></footer>
 
 </div>
 
