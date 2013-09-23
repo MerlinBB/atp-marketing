@@ -18,17 +18,29 @@
 @import "helpers.less";
 
 ::-moz-selection {
-	background:;
-	color:;
-	text-shadow: none;
+	background:@color-highlight;
+	color:#fff;
+	text-shadow:none;
 }
 ::selection {
-	background:;
-	color:;
-	text-shadow: none;
+	background:@color-highlight;
+	color:#fff;
+	text-shadow:none;
 }
 a:link {
-	-webkit-tap-highlight-color:;
+	-webkit-tap-highlight-color:@color-highlight;
+}
+
+body {
+	background:@color-grey-vlight;
+	padding-top:140px;
+}
+
+.container {
+	max-width:960px;
+	padding:0 @spacing-unit-base;
+	.center-block();
+	.cf();
 }
 
 
@@ -104,14 +116,39 @@ textarea:focus {
 //-------------------------------------------------------------------------------------------------------------------
 
 .page-header {
-	.cf();
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	background:#fff;
+	padding:@spacing-unit-base 0;
+	.transition(padding 0.4s ease-in-out);
+	&:before {
+		@size:40px;
+		content:'';
+		position:absolute;
+		bottom:-@size;
+		display:block;
+		.square(0);
+		border-left:0 solid transparent;
+		border-right:@size solid transparent;
+		border-top:@size solid #fff;
+	}
 	.sitename {
-		float:left;
-		margin:@spacing-unit-base;
+		a {
+			.retina-image("img/logo.png", "img/logo@2x.png", 196px, 66px);
+			background-repeat:no-repeat;
+			.ir();
+			.transition(height 0.4s ease-in-out);
+			.size(196px, 66px);
+			display:block;
+		}
 	}
 	nav {
-		float:right;
-		margin:@spacing-unit-base;
+		padding:(@spacing-unit-base/2);
+		.retina-image("img/colorline-header.png", "img/colorline-header@2x.png", 448px, 5px);
+		background-repeat:repeat-x;
+		background-position:center bottom;
 		li { display:inline; }
 		a:link, a:visited {
 			display:inline-block;
@@ -127,7 +164,20 @@ textarea:focus {
 		a:hover, a:focus, .current-menu-item a {
 			color:@color-highlight;
 		}
-		li:first-child a:before { content:""; }
+		li:first-child a { 
+			padding-left:0;
+			&:before { 
+				content:"";
+				margin:0;
+			}
+		}
+	}
+	&.compressed {
+		padding:0;
+		.sitename a { 
+			.retina-image("img/logo-mini.png", "img/logo-mini@2x.png", 119px, 46px);
+			height:50px;
+		}
 	}
 }
 

@@ -22,19 +22,22 @@
 	<link rel="icon" type="image/png" href="<?php bloginfo("template_url"); ?>/img/favicon.ico">
 
 	<?php wp_head(); ?>
+	<?php wp_enqueue_script('jquery'); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
 
-<div class="container">
-
 <header class="page-header">
-	<h1 class="sitename">
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-	</h1>
+	<div class="container">
+		<h1 class="sitename fl">
+			<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		</h1>
 
-	<nav class="menu">
-		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-	</nav>
+		<nav class="menu fr">
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
+		</nav>
+	</div>
 </header>
+
+<div class="container">
