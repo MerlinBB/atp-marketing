@@ -239,6 +239,18 @@ button,
 		}
 		@media (max-width: @mobile) { float:none; }
 	}
+	.hamburger {
+		display:none;
+		@media (max-width: @mobile) {
+			display:block;
+			position:absolute;
+			top:(@spacing-unit-base/2);
+			right:(@spacing-unit-base/2);
+			.square(32px); // 50px header height - @spacing-unit-base
+			background: @color-grey-vlight url(img/hamburger.png) no-repeat center center;
+			border:none;
+		}
+	}
 	&.compressed {
 		padding:0;
 		.sitename a { 
@@ -277,7 +289,7 @@ button,
 	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
 	@media (max-width: @mobile) { 
 		width:inherit;
-		margin:0;
+		margin:0 (@spacing-unit-base/2);
 		padding:(@spacing-unit-base/2);
 	}
 	.popup-actions {

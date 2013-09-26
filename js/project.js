@@ -11,4 +11,8 @@ $(function() {
         }
     });
 
+    $(".hamburger").click(function () {
+    	$("nav.menu").slideToggle("fast");
+    })
+
 });
