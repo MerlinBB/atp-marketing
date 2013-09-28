@@ -3,8 +3,7 @@
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="slidecontainer">
 		<article class="case-study slider">
-			<div class="row">
-				<div class="col-6">
+				<div class="slide">
 					<div class="row">
 						<div class="col-r-6">
 							<img src="http://placehold.it/453x300" alt="" class="scale">
@@ -17,7 +16,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-6">
+				<div class="slide">
 					<div class="row">
 						<div class="col-r-6">
 							<h1 class="heading"><?php the_title(); ?></h1>
@@ -57,7 +56,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
 		</article>
 	</div>
 	<?php endwhile; ?>

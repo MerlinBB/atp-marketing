@@ -82,6 +82,13 @@ p {
 	line-height:1em;
 	text-transform:capitalize;
 }
+.feature-title {
+	font-size:@font-size-smallheading;
+	margin:0 0 (@spacing-unit-base/2) 0;
+	line-height:1em;
+	text-transform:capitalize;
+	color:@color-highlight-alt;
+}
 
 
 //-------------------------------------------------------------------------------------------------------------------
@@ -91,13 +98,14 @@ p {
 
 a:link,
 a:visited {
-	color:;
+	color:@color-highlight;
 	text-decoration:none;
+	.transition(color 0.2s);
 }
 a:hover,
 a:focus,
 a:active {
-	color:;
+	color:@color-highlight-dark;
 	text-decoration:none;
 	outline:none;
 }
@@ -133,10 +141,11 @@ textarea:focus {
 
 input[type="submit"],
 button,
-.btn {
+a.btn {
 	display:inline-block;
 	padding:0 @spacing-unit-base;
 	line-height:2em;
+	font-size:@font-size-base;
 	.user-select(none);
 	border:1px solid @color-highlight-dark;
 	background:@color-highlight;
@@ -271,6 +280,7 @@ button,
 // Content
 //-------------------------------------------------------------------------------------------------------------------
 
+// paralax stuff
 #welcome-scene { 
 	height:650px;
 	position:absolute!important;
@@ -285,6 +295,7 @@ button,
 	.layer3 { background-image:url(img/fragments/layer3.png); }
 }
 
+// clipped corner box
 .popup {
 	padding:@spacing-unit-base;
 	margin:0 auto;
@@ -308,12 +319,29 @@ button,
 		width:50%;
 		@media (max-width: @mobile) { 
 			margin:0 (@spacing-unit-base/2);
+			width:inherit;
 		}
 	}
 	.category-case-studies & {
 
 	}
 }
+
+.list-features {
+	li {
+		.retina-image("img/icon-tick.png", "img/icon-tick@2x.png", 40px, 34px);
+		background-position:0 12px; // try to align with capheight of heading
+		background-repeat:no-repeat;
+		padding:(@spacing-unit-base/2) 0 (@spacing-unit-base/2) (@spacing-unit-base+40px);
+		min-height:34px;
+		p { margin:0; }
+	}
+}
+
+
+//-------------------------------------------------------------------------------------------------------------------
+//	Slider
+//-------------------------------------------------------------------------------------------------------------------
 
 .slidecontainer {
 	max-width:960px;
@@ -323,9 +351,18 @@ button,
 		margin:0;
 		.transition(margin 0.6s ease-in-out);
 		.box-sizing(border-box);
-		@media (max-width: @mobile) { padding:0 (@spacing-unit-base/2); }
+		.forceHardwareAcceleration();
+		.cf();
+		.slide {
+			width:50%;
+			float:left;
+			.box-sizing(border-box);
+			padding:0 @spacing-unit-base;
+			@media (max-width: @mobile) { padding:0 (@spacing-unit-base/2); }
+		}
 	}
 }
+
 
 //-------------------------------------------------------------------------------------------------------------------
 //	Footer

@@ -157,6 +157,17 @@
              -o-transform: translate3d(@x, @y, @z);
                     transform: translate3d(@x, @y, @z);
 }
+.perspective(@args) {
+    -webkit-perspective: (@args);
+    -moz-perspective: (@args);
+    perspective: (@args);
+}
+
+.forceHardwareAcceleration() {
+    .translate3d(0, 0, 0);
+    .backface-visibility(hidden);
+    .perspective(1000);
+}
 
 // Backface visibility
 //
