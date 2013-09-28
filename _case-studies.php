@@ -3,55 +3,54 @@
 	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="slidecontainer">
 		<article class="case-study slider">
+
 				<div class="slide">
 					<div class="row">
 						<div class="col-r-6">
-							<img src="http://placehold.it/453x300" alt="" class="scale">
+							<img src="<?php the_field("hero_image"); ?>" alt="screen grab of <?php the_title(); ?>" class="scale">
 						</div>
 						<div class="col-r-6">
 							<h1 class="heading"><?php the_title(); ?></h1>
-							<h2 class="subheading">Subtitle</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, saepe, iusto consectetur perspiciatis repellat cum ratione culpa labore accusantium reprehenderit molestiae iste et nam nisi vel dolorum autem id architecto odio libero totam impedit quas! Provident, ipsa, nisi, fugit, dolores pariatur ipsum sunt hic repellendus odio quae odit quos quasi.</p>
+							<h2 class="subheading"><?php the_field("subtitle"); ?></h2>
+							<?php the_field("main_description"); ?>
 							<button class="moveslideshow" data-destination="1">Read More</button>
 						</div>
 					</div>
 				</div>
+
 				<div class="slide">
 					<div class="row">
 						<div class="col-r-6">
 							<h1 class="heading"><?php the_title(); ?></h1>
-							<h2 class="subheading">Subtitle</h2>
+							<h2 class="subheading"><?php the_field("subtitle"); ?></h2>
 							<div class="row">
 								<div class="col-6">
-									<img src="http://placehold.it/209x209" alt="" class="scale img-circle mb-1x">
-									<h3 class="subheading">Feature title</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quisquam iusto illum dolor accusantium quasi accusamus repellendus in dicta ipsa!</p>
+									<img src="<?php the_field("highlight_feature_1_image"); ?>" alt="icon" class="scale img-circle mb-1x">
+									<h3 class="subheading"><?php the_field("highlight_feature_1_title"); ?></h3>
+									<?php the_field("highlight_feature_1_description"); ?>
 								</div>
 								<div class="col-6">
-									<img src="http://placehold.it/209x209" alt="" class="scale img-circle mb-1x">
-									<h3 class="subheading">Feature title</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quidem, expedita nisi magnam tempora iste voluptatem cum maxime vero repellendus.</p>
+									<img src="<?php the_field("highlight_feature_2_image"); ?>" alt="icon" class="scale img-circle mb-1x">
+									<h3 class="subheading"><?php the_field("highlight_feature_2_title"); ?></h3>
+									<?php the_field("highlight_feature_2_description"); ?>
 									<button class="moveslideshow" data-destination="0">Back</button>
 								</div>
 							</div>
 						</div>
+
 						<div class="col-r-6">
 							<div class="popup">
 								<h3 class="subheading">Features</h3>
-								<ul class="list-features">
-									<li>
-										<h4 class="feature-title">Feature Title</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consequuntur numquam nobis quis possimus quae.</p>
-									</li>
-									<li>
-										<h4 class="feature-title">Feature Title</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consequuntur numquam nobis quis possimus quae.</p>
-									</li>
-									<li>
-										<h4 class="feature-title">Feature Title</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod consequuntur numquam nobis quis possimus quae.</p>
-									</li>
-								</ul>
+								<?php if(get_field("feature_list")): ?>
+									<ul class="list-features">
+										<?php while(has_sub_field("feature_list")): ?>
+											<li>
+												<h4 class="feature-title"><?php the_sub_field('feature_title'); ?></h4>
+												<?php the_sub_field("feature_description"); ?>
+											</li>
+										<?php endwhile; ?>
+									</ul>
+								<?php endif; ?>
 							</div>
 						</div>
 					</div>
