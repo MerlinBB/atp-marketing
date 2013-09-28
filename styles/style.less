@@ -74,6 +74,13 @@ p {
 	font-size:@font-size-large;
 	margin:0 0 @spacing-unit-base 0;
 	line-height:1em;
+	text-transform:capitalize;
+}
+.subheading {
+	font-size:@font-size-subheading;
+	margin:0 0 (@spacing-unit-base/2) 0;
+	line-height:1em;
+	text-transform:capitalize;
 }
 
 
@@ -280,7 +287,6 @@ button,
 
 .popup {
 	padding:@spacing-unit-base;
-	width:50%;
 	margin:0 auto;
 	position:relative;
 	.box-sizing(border-box);
@@ -289,7 +295,6 @@ button,
 	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
 	@media (max-width: @mobile) { 
 		width:inherit;
-		margin:0 (@spacing-unit-base/2);
 		padding:(@spacing-unit-base/2);
 	}
 	.popup-actions {
@@ -298,6 +303,27 @@ button,
 		padding:@spacing-unit-base @spacing-unit-base 0;
 		text-align:center;
 		@media (max-width: @mobile) { padding:(@spacing-unit-base/2) (@spacing-unit-base/2) 0; }
+	}
+	.home & {
+		width:50%;
+		@media (max-width: @mobile) { 
+			margin:0 (@spacing-unit-base/2);
+		}
+	}
+	.category-case-studies & {
+
+	}
+}
+
+.slidecontainer {
+	max-width:960px;
+	overflow:hidden;
+	.slider {
+		width:200%;
+		margin:0;
+		.transition(margin 0.6s ease-in-out);
+		.box-sizing(border-box);
+		@media (max-width: @mobile) { padding:0 (@spacing-unit-base/2); }
 	}
 }
 

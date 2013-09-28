@@ -41,10 +41,41 @@
 }
 
 .scale {
-	width: 100%;
+	width:100%;
 	height:auto;
-	display: block;
+	display:block;
 }
+
+.img-circle { border-radius:50%; }
+
+// grid
+.row   { .make-row(); }
+
+.col-r-1  { .make-column(1); }
+.col-r-2  { .make-column(2); }
+.col-r-3  { .make-column(3); }
+.col-r-4  { .make-column(4); }
+.col-r-5  { .make-column(5); }
+.col-r-6  { .make-column(6); }
+.col-r-7  { .make-column(7); }
+.col-r-8  { .make-column(8); }
+.col-r-9  { .make-column(9); }
+.col-r-10 { .make-column(10); }
+.col-r-11 { .make-column(11); }
+.col-r-12 { .make-column(12); }
+
+.col-1  { .make-fixed-column(1); }
+.col-2  { .make-fixed-column(2); }
+.col-3  { .make-fixed-column(3); }
+.col-4  { .make-fixed-column(4); }
+.col-5  { .make-fixed-column(5); }
+.col-6  { .make-fixed-column(6); }
+.col-7  { .make-fixed-column(7); }
+.col-8  { .make-fixed-column(8); }
+.col-9  { .make-fixed-column(9); }
+.col-10 { .make-fixed-column(10); }
+.col-11 { .make-fixed-column(11); }
+.col-12 { .make-fixed-column(12); }
 
 // define 1 grid unit for margins
 @05x:  (@spacing-unit-base/2);

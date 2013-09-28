@@ -17,6 +17,10 @@
     margin-right: (-@grid-column-padding);
     // Then clear the floated columns
     .clearfix();
+    @media (max-width: @mobile) { 
+        margin-left:(-@grid-column-padding/2);
+        margin-right:(-@grid-column-padding/2);
+    }
 }
 .make-column(@columns) {
     @media (min-width: @grid-float-breakpoint) {
@@ -31,6 +35,28 @@
     padding-right: @grid-column-padding;
     // Proper box-model (padding doesn't add to width)
     .box-sizing(border-box);
+    // space out once collapsed
+    @media (max-width: @mobile) { 
+        margin-bottom:@spacing-unit-base;
+        padding-left:(@grid-column-padding/2);
+        padding-right:(@grid-column-padding/2);
+    }
+}
+.make-fixed-column(@columns) {
+    float: left;
+    // Calculate width based on number of columns available
+    width: percentage(@columns / @grid-columns);
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Set inner padding as gutters instead of margin
+    padding-left: @grid-column-padding;
+    padding-right: @grid-column-padding;
+    // Proper box-model (padding doesn't add to width)
+    .box-sizing(border-box);
+    @media (max-width: @mobile) { 
+        padding-left:(@grid-column-padding/2);
+        padding-right:(@grid-column-padding/2);
+    }
 }
 .make-column-offset(@columns) {
     @media (min-width: @grid-float-breakpoint) {
