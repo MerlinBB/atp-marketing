@@ -32,9 +32,10 @@ a:link {
 }
 
 body {
-	background:@color-grey-vlight;
+	background:#fff;
 	padding-top:140px;
 	@media (max-width: @mobile) { padding:0; }
+	&.home { background:@color-grey-light; }
 }
 
 .container {
@@ -170,7 +171,7 @@ a.btn {
 	left:0;
 	right:0;
 	z-index:1;
-	background:#fff;
+	background:@color-grey-vlight;
 	padding:@spacing-unit-base 0;
 	.transition(padding 0.4s ease-in-out);
 	@media (max-width: @mobile) { 
@@ -186,7 +187,7 @@ a.btn {
 		.square(0);
 		border-left:0 solid transparent;
 		border-right:@clip-size solid transparent;
-		border-top:@clip-size solid #fff;
+		border-top:@clip-size solid @color-grey-vlight;
 		@media (max-width: @mobile) { display:none; }
 	}
 	.sitename {
@@ -346,6 +347,7 @@ a.btn {
 .slidecontainer {
 	max-width:960px;
 	overflow:hidden;
+	margin-bottom:(@spacing-unit-base*2);
 	.slider {
 		width:200%;
 		margin:0;
