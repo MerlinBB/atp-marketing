@@ -35,7 +35,6 @@ body {
 	background:#fff;
 	padding-top:140px;
 	@media (max-width: @mobile) { padding:0; }
-	&.home { background:@color-grey-light; }
 }
 
 .container {
@@ -177,7 +176,7 @@ a.btn {
 	@media (max-width: @mobile) { 
 		position:static;
 		padding:0;
-		margin-bottom:@spacing-unit-base;
+		margin-bottom:(@spacing-unit-base/2);
 	}
 	&:before {
 		content:'';
@@ -230,7 +229,7 @@ a.btn {
 			@media (max-width: @mobile) { 
 				padding:(@spacing-unit-base/2);
 				display:block;
-				border-top:1px solid @color-grey-vlight;
+				border-top:1px solid #fff;
 				font-weight:bold;
 			}
 			&:before { 
@@ -264,7 +263,7 @@ a.btn {
 			top:(@spacing-unit-base/2);
 			right:(@spacing-unit-base/2);
 			.square(32px); // 50px header height - @spacing-unit-base
-			background: @color-grey-vlight url(img/hamburger.png) no-repeat center center;
+			background: #fff url(img/hamburger.png) no-repeat center center;
 			border:none;
 		}
 	}
@@ -303,8 +302,8 @@ a.btn {
 	position:relative;
 	.box-sizing(border-box);
 	background:#fff;
-	background:-webkit-linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
-	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.9) 30px);
+	background:-webkit-linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.95) 30px);
+	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.95) 30px);
 	@media (max-width: @mobile) { 
 		width:inherit;
 		padding:(@spacing-unit-base/2);
@@ -314,7 +313,10 @@ a.btn {
 		margin:@spacing-unit-base -@spacing-unit-base 0;
 		padding:@spacing-unit-base @spacing-unit-base 0;
 		text-align:center;
-		@media (max-width: @mobile) { padding:(@spacing-unit-base/2) (@spacing-unit-base/2) 0; }
+		@media (max-width: @mobile) { 
+			padding:(@spacing-unit-base/2) (@spacing-unit-base/2) 0;
+			margin:@spacing-unit-base (-@spacing-unit-base/2) 0;
+		}
 	}
 	.home & {
 		width:50%;
