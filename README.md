@@ -12,7 +12,7 @@ Marketing site for Audience Trading Platfrom
 - <del>products is actually case studies.</del>
 - case studies page should have a list of all case studies related to that product underneath - click through to single page which also has sub menu of other case studies for that product. (each product is a post and needs to have case studies as a repeater field of it).
 - need to add coloured headers to pages (nothing flying in/out for V1).
-- menu to be about / product / case studies contact
+- <del>menu to be about / product / case studies contact</del>
 - ditch ATP mini logo on desktop scrolled version... needs to be just symbol
 - mobile styling for contact form
 - who we are page (awaiting design from steve / claire)
