@@ -1,9 +1,9 @@
 <?php 
 	get_header();
 
-	if (in_category("case-studies")) {
+	if (in_category("products")) {
 
-		include("_case-studies.php");
+		include("_products.php");
 
 	} else {
 
