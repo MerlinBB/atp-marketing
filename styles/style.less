@@ -130,7 +130,7 @@ textarea {
 	resize:none;
 	border-radius:0;
 	margin-bottom:@spacing-unit-base;
-	.box-shadow(none); // needed for iOS
+	.appearance(none); // needed for iOS
 	.transition(all 0.2s);
 	@media (max-width: @mobile) {
 		font-size:@font-size-subheading;
@@ -167,6 +167,7 @@ a.btn {
 	border:1px solid @color-highlight-dark;
 	background:@color-highlight;
 	color:#fff;
+	.appearance(none); // needed for iOS
 	border-radius:0; // needed for iOS
 	.transition(background 0.2s);
 	&:hover, &:focus {

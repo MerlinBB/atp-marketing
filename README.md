@@ -14,7 +14,7 @@ Marketing site for Audience Trading Platfrom
 - need to add coloured headers to pages (nothing flying in/out for V1).
 - <del>menu to be about / product / case studies contact</del>
 - ditch ATP mini logo on desktop scrolled version... needs to be just symbol
-- mobile styling for contact form
+- <del>mobile styling for contact form</del>
 - who we are page (awaiting design from steve / claire)
 - move to private repository
 - <del>Add products: Audience Trader / Attribute 2 / Audience Discovery</del>
