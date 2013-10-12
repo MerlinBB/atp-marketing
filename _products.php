@@ -35,9 +35,10 @@
 								<img src="<?php the_field("highlight_feature_2_image"); ?>" alt="icon" class="scale img-circle mb-1x">
 								<h3 class="subheading"><?php the_field("highlight_feature_2_title"); ?></h3>
 								<?php the_field("highlight_feature_2_description"); ?>
-								<button class="moveslideshow" data-destination="0">Back</button>
+
+								<button class="moveslideshow slideshow-nav prev" data-destination="0">Back</button>
 								<?php if (get_field("third_slide")) { ?>
-									<button class="moveslideshow" data-destination="2">Read More</button>
+									<button class="moveslideshow slideshow-nav next" data-destination="2">More</button>
 								<?php } ?>
 							</div>
 						</div>
@@ -77,7 +78,7 @@
 									<img src="<?php the_field("highlight_feature_4_image"); ?>" alt="icon" class="scale img-circle mb-1x">
 									<h3 class="subheading"><?php the_field("highlight_feature_4_title"); ?></h3>
 									<?php the_field("highlight_feature_4_description"); ?>
-									<button class="moveslideshow" data-destination="1">Back</button>
+									<button class="moveslideshow slideshow-nav prev" data-destination="1">Back</button>
 								</div>
 							</div>
 						</div>

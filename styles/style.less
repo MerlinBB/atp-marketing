@@ -172,6 +172,7 @@ a.btn {
 	.transition(background 0.2s);
 	&:hover, &:focus {
 		background:@color-highlight-dark;
+		outline:none;
 	}
 	&:active {
 		.box-shadow(inset 0 0 5px rgba(0,0,0,0.4));
@@ -404,7 +405,10 @@ a.btn {
 .slidecontainer {
 	max-width:960px;
 	overflow:hidden;
+	padding-bottom:(@spacing-unit-base*2);
+	border-bottom:1px solid @color-highlight-light;
 	margin-bottom:(@spacing-unit-base*2);
+	.transition(height 0.6s ease-in-out);
 	.slider {
 		margin:0;
 		.transition(margin 0.6s ease-in-out);
@@ -412,6 +416,7 @@ a.btn {
 		.forceHardwareAcceleration();
 		.cf();
 		.slide {
+			position:relative;
 			float:left;
 			.box-sizing(border-box);
 			padding:0 @spacing-unit-base;
@@ -425,6 +430,13 @@ a.btn {
 			width:300%;
 			.slide { width:33.33%; }
 		}
+	}
+	.slideshow-nav {
+		position:absolute;
+		top:50%;
+		z-index:1;
+		&.prev { left:0; }
+		&.next { right:0; }
 	}
 }
 
