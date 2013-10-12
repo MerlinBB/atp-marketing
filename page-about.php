@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<div class="container nopadding">
 	
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<article>
@@ -11,11 +13,13 @@
 				<h1 class="heading"><?php the_field("sub_title"); ?></h1>
 				<?php the_field("about_text"); ?>
 				<div class="popup-actions">
-					<a class="btn" href="<?php echo home_url(); ?>/product">Products</a>
+					<a class="btn" href="<?php echo home_url(); ?>/products">Products</a>
 					<a class="btn" href="<?php echo home_url(); ?>/case-studies">Case Studies</a>
 				</div>
 			</div>
 		</article>
 	<?php endwhile; ?>
+
+</div>
 
 <?php get_footer(); ?>
