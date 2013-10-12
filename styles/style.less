@@ -406,18 +406,24 @@ a.btn {
 	overflow:hidden;
 	margin-bottom:(@spacing-unit-base*2);
 	.slider {
-		width:200%;
 		margin:0;
 		.transition(margin 0.6s ease-in-out);
 		.box-sizing(border-box);
 		.forceHardwareAcceleration();
 		.cf();
 		.slide {
-			width:50%;
 			float:left;
 			.box-sizing(border-box);
 			padding:0 @spacing-unit-base;
 			@media (max-width: @mobile) { padding:0 (@spacing-unit-base/2); }
+		}
+		&.two-slides { 
+			width:200%;
+			.slide { width:50%; }
+		}
+		&.three-slides { 
+			width:300%;
+			.slide { width:33.33%; }
 		}
 	}
 }
