@@ -11,7 +11,7 @@ Marketing site for Audience Trading Platfrom
 - <del>mobile styling for contact form</del>
 - <del>products is actually case studies.</del>
 - <del>optional to have additional slide (same layout as slide 2)</del>
-- once on second slide switch to normal slideshow controls
+- <deL>once on second slide switch to normal slideshow controls</del>
 - blue line between case studies (full width)
 - on mobile case studies link to single page (also template for desktop for permalinks)
 - adapt height of slideshow to current slide
