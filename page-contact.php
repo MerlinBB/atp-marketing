@@ -1,9 +1,13 @@
-<?php 
+<?php get_header(); ?>
 
-	get_header();
-	echo "<div class='container nopadding'>";
-		echo do_shortcode("[si-contact-form form='1']");
-	echo "</div>";
-	get_footer();
+<div class="page-title contact">
+	<div class="container nopadding">
+		<h1>Contact Us</h1>
+	</div>
+</div>
 
-?>
+<div class='container nopadding'>
+	<?php echo do_shortcode("[si-contact-form form='1']"); ?>
+</div>
+
+<?php get_footer(); ?>

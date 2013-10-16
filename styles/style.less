@@ -33,8 +33,9 @@ a:link {
 
 body {
 	background:#fff;
-	padding-top:140px;
-	@media (max-width: @mobile) { padding:0; }
+	padding:0 0 10px 0;
+	&.home { padding-top:140px; }
+	@media (max-width: @mobile) { padding:0!important; }
 }
 
 .container {
@@ -88,6 +89,31 @@ p {
 	line-height:1em;
 	text-transform:capitalize;
 	color:@color-highlight-alt;
+}
+
+.page-title {
+	padding:140px 0 (@spacing-unit-base*4) 0;
+	@media (max-width: @mobile) { 
+		margin-top:-(@spacing-unit-base/2);
+		padding:@spacing-unit-base (@spacing-unit-base/2);
+	}
+	h1 { .heading(); }
+	&.products {
+		background:#7076bd;
+		h1 { color:#dbdcee; }
+	}
+	&.casestudies {
+		background:#fca326;
+		h1 { color:#fee8c8; }
+	}
+	&.contact {
+		background:#6dc88d;
+		h1 { color:#daf1e2; }
+	}
+	&.team {
+		background:#d5299b;
+		h1 { color:#eacee3; }
+	}
 }
 
 
@@ -191,6 +217,7 @@ a.btn {
 .fscf-div-form {
 	.center-block();
 	width:80%;
+	padding:(@spacing-unit-base*2) 0;
 	@media (max-width: @mobile) { 
 		width:100%;
 	}
@@ -404,10 +431,9 @@ a.btn {
 
 .slidecontainer {
 	max-width:960px;
+	position:relative;
 	overflow:hidden;
-	padding-bottom:(@spacing-unit-base*2);
-	border-bottom:1px solid @color-highlight-light;
-	margin-bottom:(@spacing-unit-base*2);
+	padding:(@spacing-unit-base*2) 0;
 	.transition(height 0.6s ease-in-out);
 	.slider {
 		margin:0;
@@ -438,6 +464,10 @@ a.btn {
 		&.prev { left:0; }
 		&.next { right:0; }
 	}
+}
+.slidedivider {
+	border-top:1px solid @color-highlight-light;
+	margin:0;
 }
 
 
