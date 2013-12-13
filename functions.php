@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 // call minifed jQuery from bower
 function wpstarter_jquery_enqueue() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', "/wp-content/themes/atp-marketing/bower_components/jquery/jquery.min.js", false, null);
+	wp_register_script('jquery', "/wp-content/themes/atp-marketing/js/bower/jquery/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');
 }
 if (!is_admin()) add_action("wp_enqueue_scripts", "wpstarter_jquery_enqueue", 11);

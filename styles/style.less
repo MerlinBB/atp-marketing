@@ -93,7 +93,7 @@ p {
 
 .page-title {
 	padding:140px 0 (@spacing-unit-base*4) 0;
-	@media (max-width: @mobile) { 
+	@media (max-width: @mobile) {
 		margin-top:-(@spacing-unit-base/2);
 		padding:@spacing-unit-base (@spacing-unit-base/2);
 	}
@@ -218,7 +218,7 @@ a.btn {
 	.center-block();
 	width:80%;
 	padding:(@spacing-unit-base*2) 0;
-	@media (max-width: @mobile) { 
+	@media (max-width: @mobile) {
 		width:100%;
 	}
 	.fscf-div-error {
@@ -256,7 +256,7 @@ a.btn {
 	background:@color-grey-vlight;
 	padding:@spacing-unit-base 0;
 	.transition(padding 0.4s ease-in-out);
-	@media (max-width: @mobile) { 
+	@media (max-width: @mobile) {
 		position:static;
 		padding:0;
 		margin-bottom:(@spacing-unit-base/2);
@@ -280,10 +280,10 @@ a.btn {
 			.transition(height 0.4s ease-in-out);
 			.size(196px, 66px);
 			display:block;
-			@media (max-width: @mobile) { 
+			@media (max-width: @mobile) {
 				background-image: url(img/logo-mini@2x.png);
 				background-size:119px 46px;
-				height:50px; 
+				height:50px;
 			}
 		}
 		@media (max-width: @mobile) { float:none; }
@@ -293,14 +293,14 @@ a.btn {
 		.retina-image("img/colorline-header.png", "img/colorline-header@2x.png", 448px, 5px);
 		background-repeat:repeat-x;
 		background-position:center bottom;
-		@media (max-width: @mobile) { 
+		@media (max-width: @mobile) {
 			background:none;
 			padding:0;
 			display:none;
 		}
-		li { 
+		li {
 			display:inline;
-			@media (max-width: @mobile) { 
+			@media (max-width: @mobile) {
 				display:block;
 			}
 		}
@@ -309,13 +309,13 @@ a.btn {
 			padding:0 0 0 @spacing-unit-base;
 			color:@color-grey;
 			.transition(color 0.2s);
-			@media (max-width: @mobile) { 
+			@media (max-width: @mobile) {
 				padding:(@spacing-unit-base/2);
 				display:block;
 				border-top:1px solid @color-grey-light;
 				font-weight:bold;
 			}
-			&:before { 
+			&:before {
 				content:"/";
 				color:@color-grey;
 				margin-right:@spacing-unit-base;
@@ -325,13 +325,13 @@ a.btn {
 		a:hover, a:focus, .current-menu-item a {
 			color:@color-highlight;
 		}
-		li:first-child a { 
+		li:first-child a {
 			padding-left:0;
-			@media (max-width: @mobile) { 
+			@media (max-width: @mobile) {
 				border:none;
 				padding:(@spacing-unit-base/2);
 			}
-			&:before { 
+			&:before {
 				content:"";
 				margin:0;
 			}
@@ -352,7 +352,7 @@ a.btn {
 	}
 	&.compressed {
 		padding:0;
-		.sitename a { 
+		.sitename a {
 			.retina-image("img/logo-mini.png", "img/logo-mini@2x.png", 119px, 46px);
 			height:50px;
 		}
@@ -364,7 +364,7 @@ a.btn {
 //-------------------------------------------------------------------------------------------------------------------
 
 // paralax stuff
-#welcome-scene { 
+#welcome-scene {
 	height:650px;
 	position:absolute!important;
 	left:0;
@@ -385,9 +385,8 @@ a.btn {
 	position:relative;
 	.box-sizing(border-box);
 	background:#fff;
-	background:-webkit-linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.95) 30px);
 	background:linear-gradient(225deg, transparent 30px, rgba(255,255,255,0.95) 30px);
-	@media (max-width: @mobile) { 
+	@media (max-width: @mobile) {
 		width:inherit;
 		padding:(@spacing-unit-base/2);
 	}
@@ -396,14 +395,14 @@ a.btn {
 		margin:@spacing-unit-base -@spacing-unit-base 0;
 		padding:@spacing-unit-base @spacing-unit-base 0;
 		text-align:center;
-		@media (max-width: @mobile) { 
+		@media (max-width: @mobile) {
 			padding:(@spacing-unit-base/2) (@spacing-unit-base/2) 0;
 			margin:@spacing-unit-base (-@spacing-unit-base/2) 0;
 		}
 	}
 	.home & {
 		width:50%;
-		@media (max-width: @mobile) { 
+		@media (max-width: @mobile) {
 			margin:0 (@spacing-unit-base/2);
 			width:inherit;
 		}
@@ -448,11 +447,11 @@ a.btn {
 			padding:0 @spacing-unit-base;
 			@media (max-width: @mobile) { padding:0 (@spacing-unit-base/2); }
 		}
-		&.two-slides { 
+		&.two-slides {
 			width:200%;
 			.slide { width:50%; }
 		}
-		&.three-slides { 
+		&.three-slides {
 			width:300%;
 			.slide { width:33.33%; }
 		}
