@@ -5,8 +5,8 @@
 		$i = $wp_query->current_post;
 		if ($i > 0) { echo "<hr class='slidedivider'>"; }
 	?>
-	
-	<div class="container nopadding">
+
+	<div class="container">
 		<div class="slidecontainer">
 			<article class="product slider <?php if (get_field("third_slide")) { echo "three-slides"; } else { echo "two-slides"; } ?>">
 

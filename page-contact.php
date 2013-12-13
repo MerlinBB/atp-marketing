@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <div class="page-title contact">
-	<div class="container nopadding">
-		<h1>Contact Us</h1>
+	<div class="container">
+        <div class="row">
+    		<h1>Contact Us</h1>
+        </div>
 	</div>
 </div>
 
