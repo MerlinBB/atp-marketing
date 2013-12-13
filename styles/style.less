@@ -93,11 +93,15 @@ p {
 
 .page-title {
 	padding:140px 0 (@spacing-unit-base*4) 0;
+    .row { .make-row(); }
 	@media (max-width: @mobile) {
 		margin-top:-(@spacing-unit-base/2);
-		padding:@spacing-unit-base (@spacing-unit-base/2);
+		padding:@spacing-unit-base 0;
 	}
-	h1 { .heading(); }
+	h1 {
+        .heading();
+        .make-column(12);
+    }
 	&.products {
 		background:#7076bd;
 		h1 { color:#dbdcee; }
@@ -421,6 +425,21 @@ a.btn {
 		min-height:34px;
 		p { margin:0; }
 	}
+}
+
+.team-members {
+    .make-row();
+    padding:(@spacing-unit-base*2) 0;
+    li {
+        .make-column(4);
+        list-style:none;
+        img {
+            transition:all 0.4s ease-in-out;
+            &:hover {
+                border-radius:0;
+            }
+        }
+    }
 }
 
 
